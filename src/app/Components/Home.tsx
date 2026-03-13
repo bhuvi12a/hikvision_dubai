@@ -241,7 +241,7 @@ const Homepage = () => {
     return (
         <div className="min-h-screen overflow-hidden">
             {/* ==================== HERO SECTION ==================== */}
-            <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+            <section className="relative min-h-[100vh] flex items-center overflow-hidden">
                 {/* Animated background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-red-950" />
                 <div className="absolute inset-0 opacity-20">
@@ -291,29 +291,25 @@ const Homepage = () => {
 
                         {/* Hero Image */}
                         <div className={`hidden lg:flex justify-center transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                            <div className="relative">
-                                <div className="absolute -inset-4 bg-gradient-to-r from-red-500/20 to-blue-500/20 rounded-3xl blur-2xl" />
-                                <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
-                                    <Image
-                                        src="/hero-camera.png"
-                                        alt="Hikvision Security Camera"
-                                        width={450}
-                                        height={400}
-                                        className="rounded-2xl"
-                                        priority
-                                    />
-                                </div>
+
+
+                            <div className="relative ">
+                                <Image
+                                    src="/hero-camera.png"
+                                    alt="Hikvision Security Camera"
+                                    width={450}
+                                    height={400}
+                                    className="rounded-2xl"
+                                    priority
+                                />
                             </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* Scroll indicator */}
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-                    <div className="w-8 h-12 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
-                        <div className="w-1.5 h-3 bg-white/50 rounded-full animate-pulse" />
-                    </div>
-                </div>
+
             </section>
 
             {/* ==================== STATS BAR ==================== */}
@@ -454,31 +450,7 @@ const Homepage = () => {
             </section>
 
             {/* ==================== TECHNOLOGY SECTION ==================== */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <span className="inline-block text-red-600 font-semibold text-sm uppercase tracking-wider mb-3">Technology</span>
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Powered by Hikvision Innovation</h2>
-                        <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-                            Industry-leading technologies that set new standards in security and surveillance.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-                        {technologies.map((tech, index) => (
-                            <Link key={index} href={tech.href}
-                                className={`group border-2 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${tech.color}`}>
-                                <div className="text-4xl mb-4">{tech.icon}</div>
-                                <h3 className="font-bold text-lg mb-2">{tech.name}</h3>
-                                <p className="text-sm opacity-80 leading-relaxed">{tech.description}</p>
-                                <div className="mt-4 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
-                                    Explore →
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-            </section>
+           
 
             {/* ==================== INDUSTRY SOLUTIONS SECTION ==================== */}
             <section className="py-20 bg-gray-950">
@@ -618,55 +590,10 @@ const Homepage = () => {
             </section>
 
             {/* ==================== CTA / FREE QUOTE SECTION ==================== */}
-            <section className="relative py-20 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800" />
-                <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -translate-x-1/2 -translate-y-1/2" />
-                    <div className="absolute bottom-0 right-0 w-64 h-64 bg-white rounded-full translate-x-1/3 translate-y-1/3" />
-                </div>
-
-                <div className="container mx-auto px-4 relative z-10 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                        Ready to Secure Your Business?
-                    </h2>
-                    <p className="text-red-100 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-                        Get a free, no-obligation site survey and security assessment from our experts.
-                        We&apos;ll design a customized solution that fits your needs and budget.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href="/Contact"
-                            className="group inline-flex items-center justify-center gap-2 bg-white text-red-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                            Get a Free Quote
-                            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </Link>
-                        <a href="tel:+971XXXXXXXX"
-                            className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:bg-white hover:text-red-600">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                            </svg>
-                            Call Us Now
-                        </a>
-                    </div>
-                </div>
-            </section>
+           
 
             {/* ==================== BRANDS / TRUST SECTION ==================== */}
-            <section className="py-16 bg-white border-t border-gray-100">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-10">
-                        <p className="text-gray-400 font-medium uppercase tracking-wider text-sm">Trusted by Leading Organizations</p>
-                    </div>
-                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40">
-                        {['Hotels & Hospitality', 'Government', 'Banking & Finance', 'Real Estate', 'Oil & Gas', 'Transportation'].map((brand, idx) => (
-                            <div key={idx} className="text-gray-400 font-semibold text-lg hover:text-gray-600 transition-colors">
-                                {brand}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+
         </div>
     );
 };
