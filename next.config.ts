@@ -16,6 +16,10 @@ const nextConfig: NextConfig = {
         hostname: 'lsytlbporugrmwpnpgdp.supabase.co',
       },
       {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
         protocol: 'http',
         hostname: 'localhost',
       },
