@@ -6,14 +6,14 @@ import { motion } from 'framer-motion';
 import { Variants } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
-import { ChevronRight, Shield, AlertTriangle, RefreshCw } from 'lucide-react';
+import { ChevronRight, BookOpen, GraduationCap, Shield, Users, Clock, Bell, MapPin, Video, Users2, Lock, School } from 'lucide-react';
 
-const Retail = () => {
+const Education = () => {
   const router = useRouter();
-  const retailFormRef = useRef<HTMLDivElement>(null);
+  const educationFormRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = () => {
-    retailFormRef.current?.scrollIntoView({ behavior: 'smooth' });
+    educationFormRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const handleContactClick = () => {
@@ -21,13 +21,13 @@ const Retail = () => {
   };
 
   const banner = {
-    name: 'Retail Solutions',
-    subtitle: 'Security for Retail',
+    name: 'Education Security Solutions',
+    subtitle: 'Safe Learning Environments',
     tagline:
-      'Hikvision Dubai delivers comprehensive security and analytics solutions designed specifically for retail environments. Protect your inventory, staff, and customers with cutting-edge surveillance and access control systems tailored for the UAE retail sector.',
-    buttons: [{ text: 'Learn More', variant: 'outline' }],
+      'Hikvision Dubai partners with educational institutions to deliver comprehensive security and safety solutions. Protect students, staff, and campus facilities with intelligent surveillance, access control, and emergency response systems designed for modern learning environments.',
+    buttons: [{ text: 'Explore Solutions', variant: 'outline' }],
     image:
-      'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0',
+      'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZWR1Y2F0aW9ufGVufDB8fDB8fHwws',
   };
 
   // --- Animation Variants ---
@@ -89,11 +89,6 @@ const Retail = () => {
   };
 
   // Observer for sections
-  const [refRetail, inViewRetail] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
   const [refAbout, inViewAbout] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -107,22 +102,41 @@ const Retail = () => {
   const services = [
     {
       icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'Advanced Visual Surveillance',
+      title: 'Campus Access Control',
       description:
-        'High-resolution IP camera systems with intelligent video analytics provide comprehensive coverage of all retail zones, enabling proactive threat detection and detailed incident investigation.',
+        'Secure entry points with multi-factor authentication for students, staff, and visitors. Manage access to buildings, classrooms, laboratories, and administrative areas with detailed entry logs and real-time monitoring.',
     },
     {
-      icon: <AlertTriangle className="w-8 h-8 text-red-500" />,
-      title: 'Access Control & Management',
+      icon: <Video className="w-8 h-8 text-red-500" />,
+      title: 'Smart Surveillance',
       description:
-        'Multi-layer access control systems protect restricted areas including stockrooms, cash offices, and staff zones with real-time monitoring and audit trails for compliance.',
+        'AI-powered camera systems that monitor hallways, entrances, and common areas. Advanced analytics for suspicious behavior detection, crowd monitoring, and automatic alerts to security personnel.',
     },
     {
-      icon: <RefreshCw className="w-8 h-8 text-red-500" />,
-      title: 'Business Intelligence & Analytics',
+      icon: <Bell className="w-8 h-8 text-red-500" />,
+      title: 'Emergency Notification Systems',
       description:
-        'Harness data-driven insights through footfall tracking, customer behavior analysis, and operational metrics to optimize store layouts, staffing, and customer engagement strategies.',
+        'Instant mass notification systems for lockdowns, weather emergencies, or security threats. Multi-channel alerts via mobile apps, digital signage, PA systems, and SMS to ensure everyone receives critical information.',
     },
+    {
+      icon: <Users2 className="w-8 h-8 text-red-500" />,
+      title: 'Visitor Management',
+      description:
+        'Streamlined check-in processes for parents, guests, and vendors. Background screening capabilities, digital visitor badges, and time-limited access credentials to maintain campus security.',
+    },
+    {
+      icon: <MapPin className="w-8 h-8 text-red-500" />,
+      title: 'Campus Perimeter Security',
+      description:
+        'Robust fencing, lighting, and monitoring systems for campus boundaries. Drone detection, license plate recognition, and intrusion detection to prevent unauthorized access and ensure student safety.',
+    },
+    {
+      icon: <Lock className="w-8 h-8 text-red-500" />,
+      title: 'Classroom Security',
+      description:
+        'Reinforced door locks, two-way communication systems, and panic buttons in every classroom. Teachers can quickly secure rooms and alert authorities during emergencies without leaving their students.',
+    },
+   
   ];
 
   return (
@@ -138,7 +152,7 @@ const Retail = () => {
             priority
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-slate-800/10 to-slate-900/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-800/20 to-slate-900/50" />
         </div>
 
         {/* Center Content */}
@@ -162,8 +176,8 @@ const Retail = () => {
               variants={fadeInUp}
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-wider mb-2"
             >
-              <span className="text-gray-500 uppercase">RETAIL</span>
-              <span className="text-red-500"> SOLUTIONS</span>
+              <span className="text-gray-300 uppercase">EDUCATION</span>
+              <span className="text-red-500"> SECURITY</span>
             </motion.h1>
 
             {/* Tagline */}
@@ -212,8 +226,8 @@ const Retail = () => {
             {/* Back image – larger, sits behind, offset top-left */}
             <div className="absolute top-0 left-0 w-[75%] h-[78%] rounded-lg overflow-hidden shadow-2xl border border-gray-200">
               <Image
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
-                alt="Hikvision retail security team"
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop"
+                alt="Modern school campus"
                 fill
                 className="object-cover"
               />
@@ -222,14 +236,14 @@ const Retail = () => {
             {/* Front image – smaller, overlaps bottom-right */}
             <div className="absolute bottom-0 right-0 w-[60%] h-[62%] rounded-lg overflow-hidden shadow-2xl border-2 border-red-500/40 z-10">
               <Image
-                src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=800&auto=format&fit=crop"
-                alt="Hikvision Dubai retail surveillance"
+                src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=800&auto=format&fit=crop"
+                alt="School security system"
                 fill
                 className="object-cover"
               />
             </div>
 
-            {/* Decorative teal dot / glow accent */}
+            {/* Decorative red accent */}
             <div className="absolute bottom-6 left-[28%] w-10 h-10 bg-red-500/20 rounded-full blur-xl z-0" />
             <div className="absolute top-4 right-4 w-6 h-6 border-2 border-red-400/50 rounded-full z-20" />
           </motion.div>
@@ -237,15 +251,15 @@ const Retail = () => {
           {/* Right – Text */}
           <motion.div variants={fadeInRight} className="flex flex-col gap-5">
             <span className="text-red-500 text-xs font-semibold uppercase tracking-widest">
-              Retail Security Solutions
+              Education Security Solutions
             </span>
 
             <h2 className="text-gray-900 text-3xl md:text-4xl font-bold leading-snug">
-              Transform Your Retail Operations With Intelligent Security Solutions
+              Creating Safe Spaces for Learning and Growth
             </h2>
 
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              Hikvision Dubai provides comprehensive security infrastructure designed for modern retail businesses throughout the UAE. Our integrated systems combine advanced surveillance technology, real-time threat detection, and business intelligence tools to maximize operational efficiency while safeguarding your premises, inventory, and customers around the clock.
+              Hikvision Dubai understands that educational institutions face unique security challenges requiring specialized, age-appropriate solutions. We combine cutting-edge Hikvision technology with proven safety protocols to create secure learning environments that support academic excellence. From elementary schools to university campuses throughout Dubai and the UAE, we help educational leaders protect their communities while maintaining the open, welcoming atmosphere essential for student success.
             </p>
 
             <div>
@@ -259,8 +273,7 @@ const Retail = () => {
       </section>
 
       {/* ── Services / Features Section ── */}
-      <section ref={retailFormRef} className="bg-white py-20 px-4 md:px-8 lg:px-16">
-        {/* Decorative teal wave / background accent */}
+      <section ref={educationFormRef} className="bg-white py-20 px-4 md:px-8 lg:px-16">
         <div className="relative max-w-6xl mx-auto">
           {/* Section header */}
           <motion.div
@@ -271,13 +284,13 @@ const Retail = () => {
             className="text-center mb-14"
           >
             <span className="text-red-500 text-xs font-semibold uppercase tracking-widest block mb-3">
-              Our Retail Solutions
+              Comprehensive Campus Protection
             </span>
             <h2 className="text-gray-900 text-3xl md:text-4xl font-bold leading-snug max-w-xl mx-auto">
-              Comprehensive Solutions for Modern Retail Challenges
+              Integrated Security for Educational Excellence
             </h2>
             <p className="text-gray-500 text-sm md:text-base mt-4 max-w-2xl mx-auto leading-relaxed">
-              Hikvision Dubai's integrated security ecosystem delivers end-to-end protection and operational visibility, enabling retailers to make smarter decisions, reduce losses, and enhance customer experiences across all retail locations in the UAE.
+              Hikvision Dubai's education-focused security ecosystem delivers complete protection while supporting positive learning environments, regulatory compliance, and operational efficiency across schools, colleges, and universities in the UAE region.
             </p>
           </motion.div>
 
@@ -286,7 +299,7 @@ const Retail = () => {
             variants={staggerContainer}
             initial="hidden"
             animate={inViewFeatures ? 'visible' : 'hidden'}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {services.map((service, idx) => (
               <motion.div
@@ -319,4 +332,4 @@ const Retail = () => {
   );
 };
 
-export default Retail;
+export default Education;

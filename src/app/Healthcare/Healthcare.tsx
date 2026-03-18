@@ -24,7 +24,7 @@ const Healthcare = () => {
     name: 'Healthcare Solutions',
     subtitle: 'Security for Healthcare',
     tagline:
-      'Advanced security and patient monitoring solutions designed specifically for healthcare environments. Protect patients, staff, and sensitive areas with intelligent surveillance and access control systems.',
+      'Hikvision Dubai delivers advanced security and patient monitoring solutions designed specifically for healthcare environments. Protect patients, staff, and sensitive areas with intelligent surveillance and access control systems tailored for the UAE healthcare sector.',
     buttons: [{ text: 'Learn More', variant: 'outline' }],
     image:
       'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0',
@@ -263,7 +263,7 @@ const Healthcare = () => {
             </h2>
 
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              Healthcare facilities face unique security challenges that require specialized solutions. Our integrated systems combine advanced surveillance technology, intelligent access control, and patient monitoring features to create a safe, compliant, and efficient environment. From emergency rooms to pharmaceutical storage, we ensure every area is protected while maintaining the compassionate atmosphere essential for patient care.
+              Hikvision Dubai understands that healthcare facilities face unique security challenges requiring specialized solutions. Our integrated systems combine advanced surveillance technology, intelligent access control, and patient monitoring features to create safe, compliant, and efficient environments. From emergency rooms to pharmaceutical storage, we ensure every area is protected while maintaining the compassionate atmosphere essential for patient care across hospitals and clinics throughout Dubai and the UAE.
             </p>
 
             <div>
@@ -294,7 +294,7 @@ const Healthcare = () => {
               Comprehensive Security for Modern Healthcare Facilities
             </h2>
             <p className="text-gray-500 text-sm md:text-base mt-4 max-w-2xl mx-auto leading-relaxed">
-              Our healthcare-focused security ecosystem delivers end-to-end protection while supporting patient privacy, regulatory compliance, and operational efficiency across hospitals, clinics, and long-term care facilities.
+              Hikvision Dubai's healthcare-focused security ecosystem delivers end-to-end protection while supporting patient privacy, regulatory compliance, and operational efficiency across hospitals, clinics, and long-term care facilities in the UAE region.
             </p>
           </motion.div>
 
