@@ -44,7 +44,7 @@ const Footer = () => {
                         <ul className="space-y-2 text-gray-400">
                             <li>📍 Dubai, United Arab Emirates</li>
                             <li>📧 info@hikvisiondubai.ae</li>
-                            <li>📞 +971 XX XXX XXXX</li>
+                            <li>📞 +971509893134</li>
                         </ul>
                     </div>
                 </div>

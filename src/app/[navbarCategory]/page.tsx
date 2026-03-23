@@ -3,8 +3,8 @@
 import React, { useState, useEffect, use } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Navbar from '../Components/navbar';
-import Footer from '../Components/footer';
+import Navbar from '../Components/Navbra';
+import Footer from '../Components/Footer';
 
 interface Product {
     _id: string;

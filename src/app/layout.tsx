@@ -4,6 +4,7 @@ import "./globals.css";
 import 'aos/dist/aos.css';
 import { Toaster } from "react-hot-toast";
 import WhatsAppIcon from './Components/WhatsAppIcon';
+import ConditionalLayout from "./Components/ConditionalLayout";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -41,8 +42,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geist.variable} ${geistMono.variable} font-sans`}>
         <Toaster position="top-right" />
+       <ConditionalLayout>
         {children}
-        <WhatsAppIcon />
+        </ConditionalLayout>
       </body>
     </html>
   );

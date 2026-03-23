@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import Navbar from '../Components/navbar';
-import Footer from '../Components/footer';
+import Navbar from '../Components/Navbra';
+import Footer from '../Components/Footer';
 
 export default function SearchClient() {
     const searchParams = useSearchParams();

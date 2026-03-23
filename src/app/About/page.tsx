@@ -1,6 +1,4 @@
 import { Metadata } from 'next';
-import Navbar from '../Components/navbar';
-import Footer from '../Components/footer';
 import About from './About';
 
 export const metadata: Metadata = {
@@ -11,9 +9,9 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <div>
-            <Navbar />
+           
             <About />
-            <Footer />
+        
         </div>
     );
 }

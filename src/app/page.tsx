@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
-import Navbar from './Components/navbar';
-import Footer from './Components/footer';
+
 import Homepage from './Components/Home';
 import { notFound } from 'next/navigation';
 
@@ -13,9 +12,9 @@ export default function Home() {
   try {
     return (
       <div>
-        <Navbar />
+    
         <Homepage />
-        <Footer />
+      
       </div>
     );
   } catch (error) {
